@@ -72,12 +72,19 @@ export default function HeroSection() {
               Smart Office Solutions
             </div>
 
+            {/* Brand Name */}
+            <div className="mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 opacity-0 animate-slide-up">
+                Office Buddy
+              </h2>
+            </div>
+
             {/* Main Heading */}
             <div className="mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
                 <span className="block opacity-0 animate-slide-up" style={{animationDelay: '0.2s'}}>
                   Put your office on{' '}
-                  <span className="animated-autopilot-gradient">Autopilot</span>
+                  <span className="text-blue-600">Autopilot</span>
                 </span>
               </h1>
             </div>
@@ -196,20 +203,6 @@ export default function HeroSection() {
           background-clip: text;
         }
 
-        .animated-autopilot-gradient {
-          background: linear-gradient(90deg, 
-            #3b82f6,
-            #60a5fa,
-            #93c5fd,
-            #60a5fa,
-            #3b82f6
-          );
-          background-size: 200% 100%;
-          animation: gradient-shift 8s ease infinite;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
       `}</style>
     </div>
   );
