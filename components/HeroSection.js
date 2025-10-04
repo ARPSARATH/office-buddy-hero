@@ -84,10 +84,10 @@ export default function HeroSection() {
 
             {/* Subheading with rotating text */}
             <div className="text-lg md:text-xl text-gray-600 mb-12 max-w-4xl mx-auto opacity-0 animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <div className="flex items-center justify-center min-h-[60px]">
-                <p className="text-center">
+              <div className="flex items-center justify-center">
+                <span className="inline-flex items-center">
                   Everything your office needs—{' '}
-                  <span className="relative inline-block overflow-hidden h-7 w-auto min-w-[200px]">
+                  <span className="relative inline-block overflow-hidden h-7 w-auto min-w-[200px] ml-1">
                     {rotatingTexts.map((text, index) => (
                       <span
                         key={index}
@@ -101,7 +101,7 @@ export default function HeroSection() {
                       </span>
                     ))}
                   </span>
-                </p>
+                </span>
               </div>
             </div>
 
@@ -201,7 +201,6 @@ export default function HeroSection() {
             #3b82f6,
             #60a5fa,
             #93c5fd,
-            #dbeafe,
             #60a5fa,
             #3b82f6
           );
