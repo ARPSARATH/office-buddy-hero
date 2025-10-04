@@ -75,9 +75,6 @@ export default function HeroSection() {
             {/* Main Heading */}
             <div className="mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-                <span className="block mb-4 opacity-0 animate-slide-up animated-gemini-gradient">
-                  Office Buddy
-                </span>
                 <span className="block opacity-0 animate-slide-up" style={{animationDelay: '0.2s'}}>
                   Put your office on{' '}
                   <span className="animated-autopilot-gradient">Autopilot</span>
@@ -200,17 +197,16 @@ export default function HeroSection() {
         }
 
         .animated-autopilot-gradient {
-          background: linear-gradient(45deg, 
-            #667eea,
-            #764ba2,
-            #f093fb,
-            #f5576c,
-            #4facfe,
-            #00f2fe,
-            #667eea
+          background: linear-gradient(90deg, 
+            #3b82f6,
+            #1d4ed8,
+            #2563eb,
+            #1e40af,
+            #1e3a8a,
+            #3b82f6
           );
-          background-size: 400% 400%;
-          animation: gradient-shift 4s ease infinite;
+          background-size: 200% 100%;
+          animation: gradient-shift 8s ease infinite;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
