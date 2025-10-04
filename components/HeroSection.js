@@ -87,11 +87,11 @@ export default function HeroSection() {
               <div className="flex items-center justify-center min-h-[60px]">
                 <p className="text-center">
                   Everything your office needs—{' '}
-                  <span className="relative inline-block overflow-hidden h-7 w-full max-w-2xl">
+                  <span className="relative inline-block overflow-hidden h-7 w-auto min-w-[200px]">
                     {rotatingTexts.map((text, index) => (
                       <span
                         key={index}
-                        className="absolute left-0 right-0 text-center transition-all duration-700 ease-in-out font-medium"
+                        className="absolute left-0 transition-all duration-700 ease-in-out font-medium"
                         style={{
                           transform: `translateY(${(index - currentText) * 100}%)`,
                           opacity: index === currentText ? 1 : 0
@@ -199,10 +199,10 @@ export default function HeroSection() {
         .animated-autopilot-gradient {
           background: linear-gradient(90deg, 
             #3b82f6,
-            #1d4ed8,
-            #2563eb,
-            #1e40af,
-            #1e3a8a,
+            #60a5fa,
+            #93c5fd,
+            #dbeafe,
+            #60a5fa,
             #3b82f6
           );
           background-size: 200% 100%;
