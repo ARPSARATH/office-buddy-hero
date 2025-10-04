@@ -67,14 +67,14 @@ export default function HeroSection() {
           
           <div className="text-center relative z-10">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full text-sm font-medium text-blue-600 mb-8 opacity-0 animate-fade-in">
-              <Zap className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full text-xs font-medium text-blue-600 mb-6 opacity-0 animate-fade-in">
+              <Zap className="w-3 h-3" />
               Smart Office Solutions
             </div>
 
             {/* Brand Name */}
             <div className="mb-4">
-              <h2 className="text-6xl font-bold opacity-0 animate-slide-up animated-brand-gradient">
+              <h2 className="text-6xl font-bold opacity-0 animate-slide-up animated-brand-gradient" style={{color: '#f30f8b'}}>
                 Office Buddy
               </h2>
             </div>
