@@ -75,12 +75,12 @@ export default function HeroSection() {
             {/* Main Heading */}
             <div className="mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-                <span className="block mb-4 opacity-0 animate-slide-up animated-gemini-gradient bg-clip-text text-transparent">
+                <span className="block mb-4 opacity-0 animate-slide-up animated-gemini-gradient">
                   Office Buddy
                 </span>
                 <span className="block opacity-0 animate-slide-up" style={{animationDelay: '0.2s'}}>
                   Put your office on{' '}
-                  <span className="text-blue-600 animated-pulse-text">Autopilot</span>
+                  <span className="animated-autopilot-gradient">Autopilot</span>
                 </span>
               </h1>
             </div>
@@ -196,10 +196,24 @@ export default function HeroSection() {
           animation: gradient-shift 6s ease infinite;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
-        .animated-pulse-text {
-          animation: pulse-glow 2s ease-in-out infinite;
+        .animated-autopilot-gradient {
+          background: linear-gradient(45deg, 
+            #667eea,
+            #764ba2,
+            #f093fb,
+            #f5576c,
+            #4facfe,
+            #00f2fe,
+            #667eea
+          );
+          background-size: 400% 400%;
+          animation: gradient-shift 4s ease infinite;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
       `}</style>
     </div>
