@@ -41,29 +41,10 @@ export default function HeroSection() {
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-xl shadow-sm' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Left Nav Items */}
-            <div className="hidden md:flex items-center gap-8">
-              {navItems.slice(0, 2).map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            {/* Center Logo */}
-            <div className="text-2xl font-bold tracking-tight">
-              <span className="text-gray-900">Office</span>
-              <span className="text-blue-600">Buddy</span>
-            </div>
-
+          <div className="flex items-center justify-end">
             {/* Right Nav Items */}
-            <div className="hidden md:flex items-center gap-8">
-              {navItems.slice(2).map((item) => (
+            <div className="flex items-center gap-8">
+              {navItems.map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -73,9 +54,6 @@ export default function HeroSection() {
                 </a>
               ))}
             </div>
-
-            {/* Mobile menu placeholder */}
-            <div className="md:hidden w-8"></div>
           </div>
         </div>
       </nav>
@@ -97,7 +75,7 @@ export default function HeroSection() {
             {/* Main Heading */}
             <div className="mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-                <span className="block mb-2 opacity-0 animate-slide-up animated-multicolor-gradient bg-clip-text text-transparent">
+                <span className="block mb-4 opacity-0 animate-slide-up animated-gemini-gradient bg-clip-text text-transparent">
                   Office Buddy
                 </span>
                 <span className="block opacity-0 animate-slide-up" style={{animationDelay: '0.2s'}}>
@@ -108,34 +86,36 @@ export default function HeroSection() {
             </div>
 
             {/* Subheading with rotating text */}
-            <div className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto opacity-0 animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <div className="flex flex-col items-center justify-center min-h-[60px]">
-                <p className="mb-1">Everything your office needs—</p>
-                <div className="relative h-7 w-full max-w-2xl overflow-hidden">
-                  {rotatingTexts.map((text, index) => (
-                    <span
-                      key={index}
-                      className="absolute left-0 right-0 text-center transition-all duration-700 ease-in-out font-medium"
-                      style={{
-                        transform: `translateY(${(index - currentText) * 100}%)`,
-                        opacity: index === currentText ? 1 : 0
-                      }}
-                    >
-                      {text}
-                    </span>
-                  ))}
-                </div>
+            <div className="text-lg md:text-xl text-gray-600 mb-12 max-w-4xl mx-auto opacity-0 animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <div className="flex items-center justify-center min-h-[60px]">
+                <p className="text-center">
+                  Everything your office needs—{' '}
+                  <span className="relative inline-block overflow-hidden h-7 w-full max-w-2xl">
+                    {rotatingTexts.map((text, index) => (
+                      <span
+                        key={index}
+                        className="absolute left-0 right-0 text-center transition-all duration-700 ease-in-out font-medium"
+                        style={{
+                          transform: `translateY(${(index - currentText) * 100}%)`,
+                          opacity: index === currentText ? 1 : 0
+                        }}
+                      >
+                        {text}
+                      </span>
+                    ))}
+                  </span>
+                </p>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
-              <button className="group px-8 py-4 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-base">
+              <button className="group px-8 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-base">
                 Set up my office
               </button>
               <a
                 href="tel:+919884989466"
-                className="group px-8 py-4 bg-white text-gray-900 rounded-md font-medium border-2 border-gray-200 hover:border-gray-900 transition-all duration-300 hover:scale-105 flex items-center gap-2 text-base shadow-sm hover:shadow-md"
+                className="group px-8 py-3 bg-white text-gray-900 rounded-md font-medium border-2 border-gray-200 hover:border-gray-900 transition-all duration-300 hover:scale-105 flex items-center gap-2 text-base shadow-sm hover:shadow-md"
               >
                 <Phone className="w-4 h-4" />
                 Talk to Sarath
@@ -203,16 +183,17 @@ export default function HeroSection() {
           animation: fade-in 0.8s ease-out forwards;
         }
 
-        .animated-multicolor-gradient {
+        .animated-gemini-gradient {
           background: linear-gradient(90deg, 
-            #3b82f6,
-            #8b5cf6,
-            #ec4899,
-            #f59e0b,
-            #3b82f6
+            #4285f4,
+            #34a853,
+            #fbbc04,
+            #ea4335,
+            #9c27b0,
+            #4285f4
           );
           background-size: 300% 100%;
-          animation: gradient-shift 5s ease infinite;
+          animation: gradient-shift 6s ease infinite;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
