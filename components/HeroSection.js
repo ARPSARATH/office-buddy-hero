@@ -74,14 +74,14 @@ export default function HeroSection() {
 
             {/* Brand Name */}
             <div className="mb-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 opacity-0 animate-slide-up">
+              <h2 className="text-6xl font-bold opacity-0 animate-slide-up animated-brand-gradient">
                 Office Buddy
               </h2>
             </div>
 
             {/* Main Heading */}
             <div className="mb-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+              <h1 className="text-5xl font-bold tracking-tight leading-tight">
                 <span className="block opacity-0 animate-slide-up" style={{animationDelay: '0.2s'}}>
                   Put your office on{' '}
                   <span className="text-blue-600">Autopilot</span>
@@ -187,17 +187,14 @@ export default function HeroSection() {
           animation: fade-in 0.8s ease-out forwards;
         }
 
-        .animated-gemini-gradient {
+        .animated-brand-gradient {
           background: linear-gradient(90deg, 
-            #4285f4,
-            #34a853,
-            #fbbc04,
-            #ea4335,
-            #9c27b0,
-            #4285f4
+            #f30f8b,
+            #664aff,
+            #f30f8b
           );
-          background-size: 300% 100%;
-          animation: gradient-shift 6s ease infinite;
+          background-size: 200% 100%;
+          animation: gradient-shift 4s ease infinite;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
